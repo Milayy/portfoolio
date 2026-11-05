@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
-<body>
+<body data-page="home">
   <a class="skip-link" href="#main" data-i18n="skip">Liigu sisu juurde</a>
   <header class="site-header">
     <div class="header-inner wrap">
@@ -20,6 +20,7 @@
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-i18n-aria="menu">Menüü</button>
       <nav id="main-nav" aria-label="Peamenüü">
         <a href="#minust" data-i18n="navAbout">Minust</a>
+        <a href="teekond.html" data-i18n="navJourney">Teekond</a>
         <a href="#oskused" data-i18n="navSkills">Oskused</a>
         <a href="#tood" data-i18n="navWork">Projektid</a>
         <a href="#cv" data-i18n="navCv">CV</a>
@@ -70,7 +71,7 @@
           <div><span data-i18n="factSince">Õpingute algus</span><strong>2025</strong></div>
         </div>
       </div>
-      <div class="about-aside"><span class="aside-spark" aria-hidden="true">✦</span><p data-i18n="asideText">Kui saan mõne töö valmis, lisan selle projektide alla.</p><span class="aside-rule"></span><span class="aside-signature">M. N. M.</span></div>
+      <div class="about-aside"><span class="aside-spark" aria-hidden="true">✦</span><p data-i18n="asideText">Uusi töid ja pilte lisan portfooliosse hiljem juurde.</p><span class="aside-rule"></span><span class="aside-signature">M. N. M.</span></div>
     </section>
 
     <section class="skills section-pad" id="oskused" aria-labelledby="skills-title">
@@ -93,13 +94,12 @@
     <section class="work section-pad wrap" id="tood" aria-labelledby="work-title">
       <div class="section-index"><span>03</span><span data-i18n="workLabel">PROJEKTID</span></div>
       <div class="work-layout">
-        <div class="work-heading"><p class="section-kicker" data-i18n="workKicker">KOOLITÖÖD JA MUUD PROJEKTID</p><h2 id="work-title" data-i18n="workTitle">Minu<br>projektid.</h2></div>
-        <div class="work-card">
-          <span class="work-card-icon" aria-hidden="true">↗</span>
-          <span class="work-card-tag" data-i18n="workTag">LISAN HILJEM</span>
-          <h3 data-i18n="workCardTitle">Praegu siin projekte ei ole.</h3>
-          <p data-i18n="workCardCopy">Kui saan mõne koolitöö valmis, panen siia pildid ja lühikese selgituse.</p>
-          <a href="https://github.com/Milayy" target="_blank" rel="noopener noreferrer"><span data-i18n="githubVisit">Vaata GitHubi profiili</span><span aria-hidden="true"> ↗</span></a>
+        <div class="work-heading"><p class="section-kicker" data-i18n="workKicker">KODUSED PRAKTILISED TÖÖD</p><h2 id="work-title" data-i18n="workTitle">Minu<br>tehtud tööd.</h2><p data-i18n="workIntro">Olen kodus tegelenud konsoolide, arvutite ja võrguga. Blenderis tehtud tööd lisan hiljem piltidena.</p></div>
+        <div class="work-grid">
+          <article class="project-card"><span class="project-number">01 / <span data-i18n="projectHardware">RIISTVARA</span></span><span class="project-icon" aria-hidden="true">⌘</span><h3 data-i18n="projectConsolesTitle">Mängukonsoolid</h3><p data-i18n="projectConsolesCopy">Tegin korda ühe Xbox 360 ja puhastasin teise. Puhastasin ka ühe PS4 Pro.</p><span class="project-detail">2 × XBOX 360 · 1 × PS4 PRO</span></article>
+          <article class="project-card"><span class="project-number">02 / <span data-i18n="projectHardware">RIISTVARA</span></span><span class="project-icon" aria-hidden="true">▣</span><h3 data-i18n="projectComputersTitle">Arvutid</h3><p data-i18n="projectComputersCopy">Tegin korda kolm arvutit ja puhastasin kaks arvutit.</p><span class="project-detail" data-i18n="projectComputersDetail">3 PARANDUST · 2 PUHASTUST</span></article>
+          <article class="project-card"><span class="project-number">03 / <span data-i18n="projectNetwork">KODUVÕRK</span></span><span class="project-icon" aria-hidden="true">◎</span><h3 data-i18n="projectNetworkTitle">Võrk ja Windows</h3><p data-i18n="projectNetworkCopy">Tegin kodus vähemalt neli kaablit, seadistasin koduse ruuteri ja paigaldasin Windowsi vähemalt viis korda.</p><span class="project-detail" data-i18n="projectNetworkDetail">4+ KAABLIT · 5+ PAIGALDUST</span></article>
+          <article class="project-card"><span class="project-number">04 / <span data-i18n="projectCreative">3D</span></span><span class="project-icon" aria-hidden="true">✳</span><h3>Blender</h3><p data-i18n="projectBlenderCopy">Olen teinud Blenderis projekte. Lisan nende pildid ja kirjeldused hiljem.</p><span class="project-detail" data-i18n="projectBlenderDetail">PILDID TULEVAD HILJEM</span></article>
         </div>
       </div>
     </section>
@@ -116,7 +116,7 @@
           <div class="cv-paper-top"><span>CV / IT25</span><span class="cv-paper-symbol" aria-hidden="true">✳</span></div>
           <h3>Mila Nadezda<br>Melder</h3>
           <p class="cv-role" data-i18n="cvRole">IT õpilane · Rakvere Ametikool</p>
-          <div class="cv-line"><span data-i18n="cvEducation">Haridus</span><strong>Rakvere Ametikool · IT25<br>2025 — <span data-i18n="now">praegu</span></strong></div>
+          <div class="cv-line"><span data-i18n="cvEducation">Haridus</span><strong><span data-i18n="cvBasic">Tamsalu kool · 1.–8. klass<br>Kadrina Keskkool · 9. klass<br>Tallinna Tööstushariduskeskus · umbes 1,5 aastat</span><br>Rakvere Ametikool · IT25<br>2025 — <span data-i18n="now">praegu</span></strong></div>
           <div class="cv-line"><span data-i18n="cvSkills">Oskused</span><strong data-i18n="cvSkillsValue">PowerShell, Cisco Packet Tracer,<br>arvutite riistvara, Linux / Bash</strong></div>
           <div class="cv-line"><span data-i18n="cvContacts">Kontakt</span><strong><a href="mailto:milanadezdamelder@gmail.com">milanadezdamelder@gmail.com</a><br><a href="tel:+37253930319">+372 5393 0319</a></strong></div>
           <div class="cv-paper-bottom"><span data-i18n="cvFullLater">Täielik CV tuleb hiljem.</span><span aria-hidden="true">✳</span></div>
