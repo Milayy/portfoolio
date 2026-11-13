@@ -139,3 +139,5 @@
   .timeline-card-top{flex-wrap:wrap}
   .footer-inner{font-size:11px}
 }
+
+.cv-paper-bottom a{color:inherit;text-decoration:none}.cv-paper-bottom a:hover{text-decoration:underline}
